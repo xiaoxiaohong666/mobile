@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>autoSlide</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<!--autoSlide插件-->
+<script type="text/javascript" src="jquery_autoSlide.js"></script>
+
+ <style type="text/css">
+ .bg1{ background:url(img/1.jpg) no-repeat center fixed;}
+  .bg2{ background:url(img/2.jpg) no-repeat center fixed;}
+   .bg3{ background:url(img/3.jpg) no-repeat center fixed;}
+    .bg4{ background:url(img/4.jpg) no-repeat center fixed;}
+	 .bg5{ background:url(img/5.jpg) no-repeat center fixed;}
+	  .bg6{ background:url(img/6.jpg) no-repeat center fixed;}
+	   .bg7{ background:url(img/7.jpg) no-repeat center fixed;}
+.position{ height:800px; position:relative; margin:0 auto;}
+/*边栏*/
+#float{ top: 0px; display: block; width: 165px;height: 654px; position: fixed; z-index: 99;top: 44.5px; right:8px;}
+#float .c1{background: url(fl.png) no-repeat 0px -6px; display: block; width: 165px; height: 94px;}
+#float .c2{background: url(fl.png) no-repeat 0px -100px; display: block; width: 165px; height: 91px;}
+#float .c3{background: url(fl.png) no-repeat 0px -192px; display: block; width: 165px; height: 94px;}
+#float .c4{background: url(fl.png) no-repeat 0px -285px; display: block; width: 165px; height: 93px;}
+#float .c5{background: url(fl.png) no-repeat 0px -377px; display: block; width: 165px; height: 93px;}
+#float .c6{background: url(fl.png) no-repeat 0px -469px; display: block; width: 165px; height: 93px;}
+#float .c7{background: url(fl.png) no-repeat 0px -561px; display: block; width: 165px; height: 94px;}
+#float .c1:hover{background-position: -9px -6px;}
+#float .c2:hover{background: url(fl.png) no-repeat -9px -100px;}
+#float .c3:hover{background: url(fl.png) no-repeat -9px -192px;}
+#float .c4:hover{background: url(fl.png) no-repeat -9px -285px;}
+#float .c5:hover{background: url(fl.png) no-repeat -9px -377px;}
+#float .c6:hover{background: url(fl.png) no-repeat -9px -469px;}
+#float .c7:hover{background: url(fl.png) no-repeat -9px -561px;}
+</style>
+</head>
+
+<body>
+    <script type="text/javascript">           
+	function mao(s){
+    $("html,body").animate({scrollTop:$(s).offset().top},500);
+  }
+  </script>
+
+
+<div id="float">
+<a href="javascript:mao('.bg1');" class="c1"></a>
+<a href="javascript:mao('.bg2');" class="c2"></a>
+<a href="javascript:mao('.bg3');" class="c3"></a>
+<a href="javascript:mao('.bg4');" class="c4"></a>
+<a href="javascript:mao('.bg5');" class="c5"></a>
+<a href="javascript:mao('.bg6');" class="c6"></a>
+<a href="javascript:mao('.bg7');" class="c7"></a>
+</div>
+
+
+<div class="bg1 position"> <div id="tabs" class="line-con"></div> </div>
+<div class="bg2 position"> <div id="tabs" class="line-con"></div> </div>
+<div class="bg3 position"> <div id="tabs" class="line-con"></div> </div>
+<div class="bg4 position"> <div id="tabs" class="line-con"></div> </div>
+<div class="bg5 position"> <div id="tabs" class="line-con"></div> </div>
+<div class="bg6 position"> <div id="tabs" class="line-con"></div> </div>
+<div class="bg7 position"></div>
+</body>
+</html>
