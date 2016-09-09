@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/1.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <title></title>
+</head>
+<body>
+  <button onclick="hit( )">点击</button>
+      <div id="fullbg"></div>
+
+      <div id="dialog" style="position:absolute">
+          <h3 class="banner" style="cursor:move">选择广告位</h3>
+          <div>
+              <table border="1" cellpadding="0" cellspacing="0" width="99%" style="border:1px solid #ddd;">
+                  <tr>
+                      <th>购买方式</th>
+                      <th>cpc</th>
+                      <th>投放方式</th>
+                      <th>Android</th>
+                  </tr>
+                  <tr>
+                      <td><button class="a">加载</button></td>
+                      <td colspan="4">
+
+                          <input  type="radio" name="1"/>
+                          <label>树形分类</label>
+                          <input  type="radio" name="1"/>
+                          <label>综合推荐</label>
+                          <input  type="radio" name="1"/>
+                          <label>价格（高-低）</label>
+                          <input  type="radio" name="1"/>
+                          <label>价格（低-高）</label>
+                      </td>
+                  </tr>
+              </table>
+              <div style="width:99%; height:200px;border:1px solid #ddd;margin:5px 0;">
+                  <table style="border:1px solid #ddd; display:none; margin:5px auto;" width="99%" id="b" cellspacing="0" cellpadding="0">
+                      <tr>
+                          <td>这里是文件夹</td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <span class="close_layer" onclick="closeBg()">X</span>
+      </div>
+
+</body>
+<script>
+    //显示灰色 jQuery 遮罩层
+   function hit( ){
+       var bheight = Math.max( document.documentElement.clientHeight) + "px";
+       $("#fullbg").css({
+           height:bheight,
+           display:"block"
+       });
+       $("#dialog").show();
+   }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
+    $(".a").click(function(){
+        $("#b").show();
+    });
+    $(document).ready(function(){
+        $('.banner').mousedown(
+                function (event) {
+                    var isMove = true;
+                    var abs_x = event.pageX - $('#dialog').offset().left;
+                    var abs_y = event.pageY - $('#dialog').offset().top;
+                    $(document).mousemove(function (event) {
+                                if (isMove) {
+                                    var obj = $('#dialog');
+                                    obj.css({'left':event.pageX - abs_x, 'top':event.pageY - abs_y});
+                                }
+                            }
+                    ).mouseup(
+                            function () {
+                                isMove = false;
+                            }
+                    );
+                }
+        );
+    });
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none;
+        }
+        .window{
+            width:500px;
+            height:333px;
+            border:1px solid red;
+            position:relative;
+            margin:0 auto;
+        }
+        ul li img{
+            position:absolute;
+            left:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <ul>
+            <li><img src="../img/cbd.jpg" alt="" /></li>
+            <li> <img src="../img/muwu.jpg" alt="" /></li>
+            <li><img src="../img/yuantiao.jpg" alt="" /></li>
+            <li><img src="../img/shuijiao.jpg" alt="" /></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var imgs = document.querySelectorAll("img");
+    // 定义有参函数
+    function showImage(index) {
+        for (var i = 0; i < imgs.length; i++) {
+            
+            images[i].index = i;
+            //自定义属性，得到对应的下标
+//         images[i].style.left = 500 * i;
+            //为图片排列顺序
+//         images[i].style.opacity = '0';
+            images[i].style.left = '0px';
+            //将图片透明度全部赋值为0
+            spans[i].style.background = 'yellow';
+            //圆点北京色全部设置为黑色
+        }
+        //将传入参数下标值的图片透明度赋值为 1
+//          images[index].style.opacity = '1';
+        images[index].style.left = '500px';
+        //将传入参数下标值的图片的背景色赋值为white
+        spans[index].style.background = 'red';
+    }  showImage(0);
+</script>
+</html>
