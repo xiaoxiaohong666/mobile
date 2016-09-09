@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+        }
+        .wrap{
+            width:500px;
+            height:333px;
+            margin:0 auto;
+            border:1px solid red;
+            position:relative;
+            overflow:hidden;
+        }
+        .ImgOut{
+            position:absolute;
+            left:0;
+            top:0;
+        }
+
+        .ImgOut li{
+            float:left;
+        }
+        .Button{
+            display:none;
+        }
+        .Button span{
+            width:50px;
+            height:100px;
+            border:1px solid red;
+            background:#4d4d4d;
+            opacity: .8;
+            line-height:100px;
+            text-align:center;
+            cursor:pointer;
+        }
+        .leftButton{
+            position:absolute;
+            top:50%;
+            margin-top:-50px;
+        }
+        .rightButton{
+            position:absolute;
+            top:50%;
+            right:0;
+            margin-top:-50px;
+        }
+        .circle{
+            position:absolute;
+            bottom:10px;
+            width:100%;
+            font-size:0;
+            text-align: center;
+        }
+        .circle li{
+            display:inline-block;
+            width:10px;
+            height:10px;
+            border-radius:100%;
+            background:#4d4d4d;
+            border:1px solid red;
+            margin:0 5px;
+        }
+        .circle  .active{
+            background:#fff;
+        }
+    </style>
+    <script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+     <div class="wrap">
+         <ul class="ImgOut">
+             <li><img src="../img/yuantiao.jpg" alt=""/></li>
+             <li><img src="../img/muwu.jpg" alt=""/></li>
+             <li><img src="../img/shuijiao.jpg" alt=""/></li>
+             <li><img src="../img/cbd.jpg" alt=""/></li>
+         </ul>
+         <div class="Button">
+             <span class="rightButton">》</span>
+             <span class="leftButton">《</span>
+         </div>
+         <ul class="circle">
+             <li class="circledetail active"></li>
+             <li class="circledetail"></li>
+             <li class="circledetail"></li>
+         </ul>
+     </div>
+</body>
+</html>
