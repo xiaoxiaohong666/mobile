@@ -1,2 +1,3 @@
 http://os.51cto.com/art/201409/450260.htm                                   往github pages 上布东西的教程
 http://blog.csdn.net/whuhan2013/article/details/50791491                    往github上传东西的教程
+https://mp.weixin.qq.com/wiki/2/ae9782fb42e47ad79eb7b361c2149d16.html       微信公众开发者文档
