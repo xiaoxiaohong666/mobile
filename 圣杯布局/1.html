@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .layout:after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+        .layout__aside, .layout__main {
+            float: left;
+        }
+        .layout {
+            padding-left: 210px;
+        }
+        .layout__main {
+            width: 100%;
+        }
+        .layout__aside {
+            width: 200px;
+            margin-left: -210px;
+        }
+        .container{
+            padding-right:210px;
+        }
+        .left,.right{
+            float:right;
+        }
+        .right{
+            width:100%;
+        }
+        .left{
+            width:200px;
+            margin-right:-210px;
+        }
+
+        .out{
+            padding-left:210px;
+            padding-right:210px;
+        }
+        .out_left,.out_main{
+            float:left;
+        }
+        .out_right{
+            float:right;
+        }
+        .out_main{
+            width:100%;
+        }
+        .out_left{
+            margin-left:-210px;
+            width:200px;
+        }
+        .out_right{
+            width:200px;
+            margin-right:-210px;
+        }
+        .bao{
+            padding-left:420px;
+        }
+        .bao1,.bao2,.bao3{
+            float:left;
+        }
+        .bao3{
+            width:100%;
+        }
+        .bao1{
+            width:200px;
+            margin-left:-420px;
+        }
+        .bao2{
+            width:200px;
+            margin-left:-210px;
+        }
+        #floater	{float:left; height:50%; margin-bottom:-120px;}
+        #content	{clear:both; height:240px; position:relative;}
+    </style>
+</head>
+<body>
+   <div class="container" >
+       <div class="left" style="border:1px solid blue;height:20px;"></div>
+       <div class="right" style="border:1px solid blue;height:20px;"></div>
+   </div>
+   <div style="clear:both;margin-bottom:40px;"></div>
+   <div class="layout">
+       <aside class="layout__aside" style="border:1px solid red;">侧边栏宽度固定</aside>
+       <div class="layout__main" style="border:1px solid red;">主内容栏宽度自适应</div>
+   </div>
+   <div style="clear:both;margin-bottom:40px;"></div>
+   <div class="out" >
+       <div class="out_left" style="border:1px solid blue;">我是左边</div>
+       <div class="out_main" style="border:1px solid blue; ">我是中间</div>
+       <div class="out_right" style="border:1px solid blue;">我是右边</div>
+   </div>
+   <div style="clear:both;margin-bottom:40px;"></div>
+<div class="bao">
+    <div class="bao1" style="border:1px solid red">我是包一</div>
+    <div class="bao2" style="border:1px solid blue">我是包二</div>
+    <div class="bao3" style="border:1px solid green">我是包三</div>
+</div>
+   <div style="clear:both;margin-bottom:40px;"></div>
+<div style="height:100px;border:1px solid red;display:table;">
+   <div style="display:table-cell;vertical-align: middle;">我要垂直居中</div>
+</div>
+
+       <div style="position:absolute;top:50%;height:240px;left:50%;;margin-top:-120px;margin-left:-100px;width:200px;border:1px solid red;">
+           我是在中间的一个东西
+       </div>
+
+<div id="floater">
+    <div id="content">我是要居中的</div>
+</div>
+<div style="position:absolute;top:0; bottom:0; left:0;right:0;margin:auto;height:240px;width:70%;border:1px solid yellowgreen;">
+
+</div>
+</body>
+</html>
